@@ -7,7 +7,7 @@
 #include <assert.h>
 
 using namespace std;
-
+// changing file for New Branch
 class singleton{
 	static singleton s;
 	int i;
@@ -51,6 +51,7 @@ void* f2(void* arg){
 }
 
 int main(int argc, char **argv) {
+  printf("Shivam");
   pthread_t th1, th2;
 
 	singleton& first_obj = singleton::getHandle();
@@ -63,5 +64,6 @@ int main(int argc, char **argv) {
   pthread_join(th1, NULL);
   pthread_join(th2, NULL);
 
+  printf(" Sunny Shivam");
   pthread_exit(NULL);
 }
